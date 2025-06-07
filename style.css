@@ -1,0 +1,134 @@
+body {
+    background-color: #8AA96E;
+    margin: 0;
+    padding: 0;
+}
+
+.h1_img {
+    display: block;
+}
+
+.img_h1 {
+    width: 100%;
+    height: 725px;
+}
+
+.span {
+    color: #8AA96E;
+}
+
+.h1 {
+    position: absolute;
+    color: #F2F2F2;
+    left: 42%;
+}
+
+main {
+    background-color: #3a516e;
+    color: #F2F2F2;
+    padding-bottom: 350px;
+    text-align: center;
+}
+
+.text_about {
+    font-size: 18px;
+}
+
+.button {
+    padding: 20px 40px;
+    border-radius: 50px;
+    background-image: linear-gradient(to right bottom, #8aa98a ,#3a516e);
+    border: 3px solid #F2F2F2;
+    color: #F2F2F2;
+    text-align: center;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.button:hover {
+    transform: scaleX(1.2);
+    transition: 0.3s;
+    background-color: #6e8d6e;
+}
+
+a {
+    color: #F2F2F2;
+}
+
+a:focus {
+    color: #F2F2F2;
+}
+
+/* Наші переваги */
+.our_advantages_block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.our_advantages_block > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 250px;
+    color: black;
+    background-image: linear-gradient(to right bottom, white, gray);
+    border-radius: 50px 0px 50px 0px;
+    transition: border-radius 0.5s ease;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+}
+
+.our_advantages_block > div:hover {
+    border-radius: 0px 50px 0px 50px;
+}
+
+/* Футер */
+footer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #3a516e;
+    padding: 20px 0;
+}
+
+footer h3 {
+    color: #F2F2F2;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_GitHub_Danya,
+.img_GitHub_Maks,
+.img_GitHub_Tima {
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.btn_GitHub_Danya,
+.btn_GitHub_Maks,
+.btn_GitHub_Tima {
+    border-radius: 50px;
+}
+
+.Danya, .Maks, .Tima {
+    text-align: center;
+}
+.fade-up {
+    opacity: 0;
+    transform: translateY(50px);
+}

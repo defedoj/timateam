@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Тест на знання англ. мови</title>
+  <link rel="icon" href="image.png" type="image/x-icon" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #2c3e50, #3498db);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .question-container {
+      background-color: #ffffffee;
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .text_question {
+      font-size: 24px;
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    .inp_question {
+      width: 100%;
+      padding: 15px;
+      font-size: 18px;
+      border: 2px solid #2c3e50;
+      border-radius: 12px;
+      outline: none;
+      margin-bottom: 20px;
+      transition: 0.3s;
+    }
+
+    .inp_question:focus {
+      border-color: #3498db;
+      box-shadow: 0 0 5px #3498db;
+    }
+
+    .button_confirm {
+      background-image: linear-gradient(to right, #2c3e50, #3498db);
+      color: #fff;
+      padding: 15px 30px;
+      border: none;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .button_confirm:hover {
+      transform: scale(1.05);
+      background-image: linear-gradient(to right, #1b2635, #2f75b5);
+    }
+  </style>
+</head>
+<body>
+  <div class="question-container" id="fadeBox">
+    <p class="text_question">Я пишу код</p>
+    <input class="inp_question" type="text" placeholder="Введіть відповідь" id="answerInput"/>
+    <button onclick="Question3()" class="button_confirm">Підтвердити відповідь</button>
+  </div>
+
+  <!-- Anime.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+  <!-- Анімація при завантаженні -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      anime({
+        targets: '#fadeBox',
+        translateY: [30, 0],
+        opacity: [0, 1],
+        easing: 'easeOutExpo',
+        duration: 1000
+      });
+    });
+  </script>
+
+  <!-- Перевірка відповіді -->
+  <script>
+    function Question3() {
+      const input = document.getElementById('answerInput').value.trim().toLowerCase();
+      if (input === 'i write code') {
+        alert('✅ Правильно!');
+        window.location.href = 'test4.html';
+      } else {
+        alert('❌ Неправильно. Правильна відповідь: I write code');
+      }
+    }
+  </script>
+</body>
+</html>
