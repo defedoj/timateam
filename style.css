@@ -46,9 +46,11 @@ main {
 }
 
 .button:hover {
-    transform: scaleX(1.2);
+
     transition: 0.3s;
     background-color: #6e8d6e;
+    padding-right: 60px;
+    padding-left: 60px;
 }
 
 a {
